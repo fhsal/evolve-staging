@@ -59,6 +59,7 @@ axios.post('/api/user',{
             sessionStorage.setItem('email', response.data.email)
             sessionStorage.setItem('userID', response.data.userID)
             sessionStorage.setItem('enrollDate', response.data.enrollDate)
+            sessionStorage.setItem('fullName', response.data.fullName)
             this.props.history.push('/landing')
             } 
         else {
