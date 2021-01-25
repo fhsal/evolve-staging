@@ -13,11 +13,13 @@ let date = ' date'
 
 function MyAccount() {
 
-    if (sessionStorage.user){user = ' ' + sessionStorage.user}
-    if (sessionStorage.fullName){name = ' ' + sessionStorage.fullName}
+    if (sessionStorage.user){user = ' ' + sessionStorage.displayName}
+    if (sessionStorage.FullName){name = ' ' + sessionStorage.fullName}
     if (sessionStorage.email){email = ' ' + sessionStorage.email}
-    if (sessionStorage.registerDate){date = ' ' + sessionStorage.enrollDate}
-
+	if (sessionStorage.registerDate){date = ' ' + sessionStorage.enrollDate}
+name = sessionStorage.fullName
+date = sessionStorage.enrollDate
+user = sessionStorage.user
 	return (
 		<div className="text-center">
 			<div>
@@ -31,11 +33,10 @@ function MyAccount() {
 						<Col size="md-12">
 							<h1 className="text-center">{name+"'s Account Information:"}</h1>
                             <p></p>
-                            <h3 className="text-center">{'Name:' + name} </h3>
-                            <h3 className="text-center">{'Username:' + user} </h3>
-                            <h3 className="text-center">{'Email:' + email} </h3>
-                            <h3 className="text-center">{'Member Since: ' + sessionStorage.enrollDate} </h3>
-
+                            <h3 className="text-center">{'Name:  ' + name} </h3>
+                            <h3 className="text-center">{'Username:  ' + user} </h3>
+                            <h3 className="text-center">{'Email:  ' + email} </h3>
+                            <h3 className="text-center">{'Member Since:  ' + date} </h3>
 						</Col>
 					</Row>
 				</Container>

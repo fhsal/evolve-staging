@@ -53,13 +53,14 @@ axios.post('/api/user',{
         console.log(response)
         if (response.data) {
             console.log('successful signup')
+            console.log(response)
             alert('Welcome to Evolve !')
             sessionStorage.setItem('loginStatus', this.state.loggedIn)
-            sessionStorage.setItem('user', response.data.displayName)
+            sessionStorage.setItem('displayName', this.state.displayName)
             sessionStorage.setItem('email', response.data.email)
             sessionStorage.setItem('userID', response.data.userID)
             sessionStorage.setItem('enrollDate', response.data.enrollDate)
-            sessionStorage.setItem('fullName', response.data.fullName)
+            sessionStorage.setItem('FullName', response.data.name)
             this.props.history.push('/landing')
             } 
         else {
