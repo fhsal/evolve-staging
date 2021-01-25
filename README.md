@@ -1,5 +1,3 @@
-# evolve
-
 # E-Volve
 
 ## Project Description
