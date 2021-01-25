@@ -10,7 +10,7 @@ let user = ' user'
 
 function Landing () {
 
-  if (sessionStorage.user){user = ' ' + sessionStorage.user}
+  if (sessionStorage.displayName){user = ' ' + sessionStorage.displayName}
 
   return (
 

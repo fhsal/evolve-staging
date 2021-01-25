@@ -37,6 +37,13 @@ class SignUpForm extends Component {
         console.log(userID);
         let date = new Date().toJSON().substring(0, 10);
         this.setState({enrollDate: date})
+        sessionStorage.setItem('loginStatus', 'loggedIn')
+        sessionStorage.setItem('name', this.state.name)
+        sessionStorage.setItem('displayName', this.state.displayName)
+        sessionStorage.setItem('email', this.state.email)
+        sessionStorage.setItem('userID', userID)
+        sessionStorage.setItem('enrollDate', date)
+        sessionStorage.setItem('fullName', this.state.name)
         this.setState({
             redirectTo: '/'
         })
@@ -53,14 +60,14 @@ axios.post('/api/user',{
         console.log(response)
         if (response.data) {
             console.log('successful signup')
-            console.log(response)
+            console.log(response.data)
             alert('Welcome to Evolve !')
-            sessionStorage.setItem('loginStatus', this.state.loggedIn)
+            // sessionStorage.setItem('loginStatus', 'loggedIn')
             sessionStorage.setItem('displayName', this.state.displayName)
-            sessionStorage.setItem('email', response.data.email)
-            sessionStorage.setItem('userID', response.data.userID)
-            sessionStorage.setItem('enrollDate', response.data.enrollDate)
-            sessionStorage.setItem('FullName', response.data.name)
+            // sessionStorage.setItem('email', response.data.email)
+            // sessionStorage.setItem('userID', response.data.userID)
+            // sessionStorage.setItem('enrollDate', response.data.enrollDate)
+            // sessionStorage.setItem('fullName', response.data.name)
             this.props.history.push('/landing')
             } 
         else {

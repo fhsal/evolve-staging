@@ -14,12 +14,12 @@ let date = ' date'
 function MyAccount() {
 
     if (sessionStorage.user){user = ' ' + sessionStorage.displayName}
-    if (sessionStorage.FullName){name = ' ' + sessionStorage.fullName}
+    if (sessionStorage.fullName){name = ' ' + sessionStorage.fullName}
     if (sessionStorage.email){email = ' ' + sessionStorage.email}
 	if (sessionStorage.registerDate){date = ' ' + sessionStorage.enrollDate}
 name = sessionStorage.fullName
 date = sessionStorage.enrollDate
-user = sessionStorage.user
+user = sessionStorage.displayName
 	return (
 		<div className="text-center">
 			<div>
