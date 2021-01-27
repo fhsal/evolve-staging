@@ -6,7 +6,7 @@ import Col from "../components/Col";
 import RandomQuote from "../components/RandomQuote"
 import { Image } from 'react-bootstrap'
 
-let user = ' user'
+let user = ' '
 
 function Landing () {
 

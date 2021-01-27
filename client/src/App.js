@@ -27,7 +27,7 @@ function App() {
   
         <NavBar />
         <Wrapper>
-          <Route exact path="/" component={Login} />
+          <Route exact path="/" component={Landing} />
           <Route exact path="/landing" component={Landing} />
           <Route exact path="/physical" component={Physical} />
           <Route exact path="/mental" component={Mental} />
