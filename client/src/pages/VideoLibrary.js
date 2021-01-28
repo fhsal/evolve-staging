@@ -17,7 +17,7 @@ function VideoLibrary() {
         <Row>
           <Col size="md-12">
 
-        <Image src="../../images/evolvepics1.jpeg" className="mb-2" fluid />
+        <Image src="../../images/evolvepics1.jpeg" className="mb-2" fluid style={{ marginBottom: 0, height:800 }} />
             <p> 
             <Videos></Videos>
             </p>

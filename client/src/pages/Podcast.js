@@ -17,7 +17,7 @@ function PodcastLibrary() {
         <Row>
           <Col size="md-12">
 
-          <Image src="../../images/evolvepod2.jpeg" fluid />
+          <Image src="../../images/evolvepod2.jpeg" fluid style={{ marginBottom: 0, height:575 }} />
             <p> 
             <Podcasts></Podcasts>
             </p>
